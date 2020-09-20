@@ -6,6 +6,7 @@
   <title>Фабрика скинали</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/twentytwenty.css">
 </head>
 <body>
 <a href="#" class="menu__link">примеры работ</a>
@@ -61,26 +62,22 @@
       <div class="offer__block offer-block offer-block_calc-bg">
         <h2 class="offer-title">ОСТАВЬТЕ ЗАЯВКУ НА РАСЧЕТ</h2>
         <span class="offer__subtitle">и получите скидку 30% на изготовление скинали или фартука для кухни</span>
-        <form action="#" class="form offer__form">
+        <form action="mail.php" class="form offer__form" method="POST">
           <div class="form__row">
             <div class="form__group">
               <label for="" class="form__label">Вид стекла</label>
-              <input type="text" name="type" id="select-type" value="С печатью">
               <div class="select form__select">
-                <div class="select_checked">С печатью</div>
-                <ul class="select__dropdown">
-                  <li class="select-option" value="С печатью">С печатью</li>
-                  <li class="select-option" value="Без печати">Без печати</li>
-                </ul>
+                <p><input type="radio" name="type"> С печатью</p>
+                <p><input type="radio" name="type"> Без печати</p>
               </div>
             </div>
             <div class="form__group">
               <label for="" class="form__label">Ширина, см </label>
-              <input type="text" class="input form__input">
+              <input type="text" name="width" id="width_skinali" class="input form__input">
             </div>
             <div class="form__group">
               <label for="" class="form__label">Высота, см </label>
-              <input type="text" class="input form__input">
+              <input type="text" id="" name="height" class="input form__input">
             </div>
           </div>
           <div class="form__row form__row-checkbox">
@@ -95,10 +92,10 @@
           </div>
           <div class="form__row">
             <div class="form__group">
-              <input type="text" class="form__input input" placeholder="Ваше имя">
+              <input type="text" class="form__input input" name="user_name" id="user_name" placeholder="Ваше имя">
             </div>
             <div class="form__group">
-              <input type="tel" class="form__input input" placeholder="Ваш телефон">
+              <input type="tel" class="form__input input"  name="user_phone" id="user_phone" placeholder="Ваш телефон">
             </div>
             <div class="form__group">
               <input type="submit" class="button form__button" value="получить скидку">
@@ -552,16 +549,16 @@
         <h2 class="offer-title">Ищите где дешевле и лучше?</h2>
         <span class="offer__subtitle">Если у Вас уже есть расчет от другой фирмы, но Вы хотите цену дешевле,
           укажите ее - и мы вам пересчитаем заказ с максимальной скидкой</span>
-        <form action="#" class="form offer__form">
+        <form action="mail.php" class="form offer__form" method="POST">
           <div class="form__row">
             <div class="form__group">
-              <input type="text" class="input form__input" placeholder="Ваше имя">
+              <input type="text" class="input form__input" name="user_name" id="name" placeholder="Ваше имя">
             </div>
             <div class="form__group">
-              <input type="text" class="input form__input" placeholder="Ваш телефон">
+              <input type="text" class="input form__input" name="user_phone" id="phone-2" placeholder="Ваш телефон">
             </div>
             <div class="form__group">
-              <input type="text" class="input form__input" placeholder="Ваша цена">
+              <input type="text" class="input form__input" name="user_price" placeholder="Ваша цена">
             </div>
           </div>
           <div class="form__row">
@@ -682,9 +679,10 @@
 </footer>
 <!-- /.footer -->
     <!-- Подключение виджета обратной связи через соцсети-->
-    <script
-      type="text/javascript"
-      src="https://spikmi.com/Widget?Id=4088"
-    ></script>
+    <script type="text/javascript" src="https://spikmi.com/Widget?Id=4088"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
   </body>
 </html>
